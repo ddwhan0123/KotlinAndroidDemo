@@ -40,7 +40,17 @@ class Person {
         var g: Int = f.toInt()
         var h: Boolean = true
         var i: Char = '1'
-        println("a " + a + " b " + b + " c " + c + " d " + d + " e " + e + " f " + f + " g " + g + " h " + h + " i " + i)
+        var j = Array(10, { i1 -> i1 * i1 })
+        var k = emptyArray<Int>().distinct()
+        var l: String = "1086"
+        var m = l.length
+        var n = """
+           if(a){}
+        """
+        var o: String = f.toString() + "1234"
+        println("---> a " + a + " b " + b + " c " + c + " d " + d + " e " + e + " f " + f +
+                " g " + g + " h " + h + " i " + i + " j " + j.size + " k " + k + " l " + l + " m " + m + " n " + n
+                + " o " + o)
     }
 
 }
