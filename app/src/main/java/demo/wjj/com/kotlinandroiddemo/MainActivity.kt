@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this, people.name, Toast.LENGTH_SHORT).show()
             val person = Person()
             person.printInt(this)
+            person.testWhen(People(edit_text.text.toString().trim()))
         }
     }
 
