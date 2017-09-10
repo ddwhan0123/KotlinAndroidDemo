@@ -1,9 +1,11 @@
 package demo.wjj.com.kotlinandroiddemo
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import demo.wjj.com.kotlinandroiddemo.activity.SecondActivity
 import demo.wjj.com.kotlinandroiddemo.bean.People
 import demo.wjj.com.kotlinandroiddemo.bean.Person
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,6 +27,13 @@ class MainActivity : AppCompatActivity() {
             person.printInt(this)
             person.testWhen(People(edit_text.text.toString().trim()))
         }
+
+        jump_button.setOnClickListener { jump() }
+    }
+
+    private fun jump() {
+        var intent = Intent()
+        startActivity(intent.setClass(this, SecondActivity::class.java))
     }
 
     override fun onDestroy() {

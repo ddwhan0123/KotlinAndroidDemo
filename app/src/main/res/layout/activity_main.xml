@@ -30,6 +30,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="在此输入你的名字" />
+
+        <Button
+            android:id="@+id/jump_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转到第二页" />
     </LinearLayout>
 
 
