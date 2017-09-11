@@ -5,13 +5,14 @@ import android.util.Log
 
 import demo.wjj.com.kotlinandroiddemo.R
 import demo.wjj.com.kotlinandroiddemo.base.BaseActivity
+import demo.wjj.com.kotlinandroiddemo.bean.school.Classes
+import demo.wjj.com.kotlinandroiddemo.bean.school.Grade
+import demo.wjj.com.kotlinandroiddemo.bean.school.Student
 
 //这里只是随便写了个构造函数
-class SecondActivity : BaseActivity("") {
+class SecondActivity : BaseActivity() {
     //对onCreate方法进行了拆分，这里会返回布局ID
-    override fun getLayoutID(): Int {
-        return R.layout.activity_second
-    }
+    override fun getLayoutID(): Int = R.layout.activity_second
 
     //对onCreate方法进行了拆分，这里可以做简单对初始化操作
     override fun init() {
@@ -28,6 +29,12 @@ class SecondActivity : BaseActivity("") {
         super.onResume()
         Log.d("--->", "SecondActivity onResume")
         showToast(this, "我是第二页的 Toast", 1)
+        var classes = Classes("三年级二班")
+        Log.d("----> ", "SecondActivity onResume classes " + classes.className)
+        var student = Student("wjj", 20, true)
+        Log.d("----> ", "SecondActivity onResume student sex " + student.sex)
+        val grade = Grade()
+        Log.d("----> ", "SecondActivity onResume Grade GradeNumber " + grade.GradeNumber)
     }
 
     override fun onPause() {

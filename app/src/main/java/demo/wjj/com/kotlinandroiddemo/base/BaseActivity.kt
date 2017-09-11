@@ -11,7 +11,11 @@ import android.widget.Toast
 /**
  * Created by wangjiajie on 2017/9/11.
  */
-abstract class BaseActivity(value: String) : AppCompatActivity() {
+abstract class BaseActivity() : AppCompatActivity() {
+    init {
+        Log.d("--->", "BaseActivity init block")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutID())
