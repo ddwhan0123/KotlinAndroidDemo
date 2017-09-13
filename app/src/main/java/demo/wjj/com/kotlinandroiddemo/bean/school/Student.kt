@@ -4,6 +4,7 @@ package demo.wjj.com.kotlinandroiddemo.bean.school
  * Created by wangjiajie on 2017/9/11.
  */
 open class Student(var name: String) {
+    //初始化方法
     init {
         if (name.equals("wjj")) {
             name = "王亟亟"
@@ -12,9 +13,9 @@ open class Student(var name: String) {
     }
 
     var age: Int = 0
-    var sex: Boolean = true
+    var sex: Boolean = true//修改引用的值
         get() {
-            return !name.equals("王亟亟")
+            return name != "王亟亟"
         }
 
     constructor(name: String, age: Int) : this(name) {
@@ -25,5 +26,4 @@ open class Student(var name: String) {
         this.age = age
         this.sex = sex
     }
-
 }

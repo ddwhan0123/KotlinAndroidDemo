@@ -5,7 +5,6 @@ package demo.wjj.com.kotlinandroiddemo.bean.school;
  */
 
 public class Classes extends Student {
-
     //学生人数
     private int StudentNumber;
     //班名
