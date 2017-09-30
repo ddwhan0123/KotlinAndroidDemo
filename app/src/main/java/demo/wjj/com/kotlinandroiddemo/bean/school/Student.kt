@@ -1,9 +1,21 @@
 package demo.wjj.com.kotlinandroiddemo.bean.school
 
+import demo.wjj.com.kotlinandroiddemo.bean.school.schoollogic.HomeWork
+import demo.wjj.com.kotlinandroiddemo.bean.school.schoollogic.WeekendWork
+
 /**
  * Created by wangjiajie on 2017/9/11.
  */
-open class Student(var name: String) {
+open class Student(var name: String) : HomeWork, WeekendWork {
+    override fun doMathQuestion() {
+        println("----->学生周末做题了")
+        super<HomeWork>.doMathQuestion()
+    }
+
+    override fun readBook() {
+        println("----->学生读书了")
+    }
+
     //初始化方法
     init {
         if (name.equals("wjj")) {

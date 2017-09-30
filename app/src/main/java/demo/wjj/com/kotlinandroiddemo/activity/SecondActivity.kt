@@ -33,6 +33,8 @@ class SecondActivity : BaseActivity() {
         Log.d("----> ", "SecondActivity onResume classes " + classes.className)
         var student = Student("wjj", 20, true)
         Log.d("----> ", "SecondActivity onResume student sex " + student.sex)
+        student.doMathQuestion()
+        student.readBook()
         val grade = Grade()
         Log.d("----> ", "SecondActivity onResume Grade GradeNumber " + grade.GradeNumber)
     }
